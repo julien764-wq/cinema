@@ -275,18 +275,23 @@ input:focus, select:focus {
 <body>
 
 <header>
-  <h1>Ma Cinémathèque <span>Idéale</span></h1>
-  <p>Mes 30 films préférés par décennie (1990 — 2026)</p>
+  <h1>Ma <span>Cinémathèque</span></h1>
+  <p>Mes films préférés par décennie</p>
 </header>
 
 <div class="container">
   <!-- Onglets -->
   <div class="tabs" id="decadeTabs">
-    <button class="tab-btn active" data-decade="ALL">Toutes (120)</button>
-    <button class="tab-btn" data-decade="1990">Années 1990 (30)</button>
-    <button class="tab-btn" data-decade="2000">Années 2000 (30)</button>
-    <button class="tab-btn" data-decade="2010">Années 2010 (30)</button>
-    <button class="tab-btn" data-decade="2020">Années 2020 (30)</button>
+    <button class="tab-btn active" data-decade="ALL">Toutes (154)</button>
+    <button class="tab-btn" data-decade="1940">Années 1940 (1)</button>
+    <button class="tab-btn" data-decade="1950">Années 1950 (1)</button>
+    <button class="tab-btn" data-decade="1960">Années 1960 (3)</button>
+    <button class="tab-btn" data-decade="1970">Années 1970 (11)</button>
+    <button class="tab-btn" data-decade="1980">Années 1980 (9)</button>
+    <button class="tab-btn" data-decade="1990">Années 1990 (29)</button>
+    <button class="tab-btn" data-decade="2000">Années 2000 (43)</button>
+    <button class="tab-btn" data-decade="2010">Années 2010 (39)</button>
+    <button class="tab-btn" data-decade="2020">Années 2020 (18)</button>
   </div>
 
   <!-- Filtres -->
@@ -337,6 +342,41 @@ input:focus, select:focus {
 
 <script>
 const movies = [
+  // 1940
+  { decade: "1940", title: "CITIZEN KANE", year: 1941, director: "ORSON WELLES", genre: "Drame", myNote: 4.6, specNote: 4.2 },
+
+  // 1950
+  { decade: "1950", title: "12 HOMMES EN COLÈRE", year: 1957, director: "SIDNEY LUMET", genre: "Drame", myNote: 4.6, specNote: 4.5 },
+
+  // 1960
+  { decade: "1960", title: "DOCTEUR FOLAMOUR", year: 1964, director: "STANLEY KUBRICK", genre: "Comédie, Guerre", myNote: 4.5, specNote: 4.2 },
+  { decade: "1960", title: "2001 L'ODYSSÉE DE L'ESPACE", year: 1968, director: "STANLEY KUBRICK", genre: "Science-Fiction", myNote: 4.7, specNote: 4.2 },
+  { decade: "1960", title: "IL ÉTAIT UNE FOIS DANS L'OUEST", year: 1968, director: "SERGIO LEONE", genre: "Western", myNote: 4.2, specNote: 4.3 },
+
+  // 1970
+  { decade: "1970", title: "ORANGE MÉCANIQUE", year: 1971, director: "STANLEY KUBRICK", genre: "Drame, Science-Fiction", myNote: 4.6, specNote: 4.2 },
+  { decade: "1970", title: "LE PARRAIN", year: 1972, director: "FRANCIS FORD COPPOLA", genre: "Drame, Crime", myNote: 4.6, specNote: 4.6 },
+  { decade: "1970", title: "LE PARRAIN, 2e PARTIE", year: 1974, director: "FRANCIS FORD COPPOLA", genre: "Drame, Crime", myNote: 4.6, specNote: 4.5 },
+  { decade: "1970", title: "VOL AU DESSUS D'UN NID DE COUCOU", year: 1975, director: "MILOS FORMAN", genre: "Drame", myNote: 4.7, specNote: 4.4 },
+  { decade: "1970", title: "TAXI DRIVER", year: 1976, director: "MARTIN SCORSESE", genre: "Drame, Thriller", myNote: 4.6, specNote: 4.1 },
+  { decade: "1970", title: "ROCKY", year: 1976, director: "JOHN G. AVILDSEN", genre: "Drame", myNote: 4.3, specNote: 4.1 },
+  { decade: "1970", title: "STAR WARS UN NOUVEL ESPOIR", year: 1977, director: "GEORGE LUCAS", genre: "Science-Fiction, Aventure", myNote: 4.4, specNote: 4.3 },
+  { decade: "1970", title: "VOYAGE AU BOUT DE L'ENFER", year: 1978, director: "MICHAEL CIMINO", genre: "Drame, Guerre", myNote: 4.5, specNote: 4.1 },
+  { decade: "1970", title: "MIDNIGHT EXPRESS", year: 1978, director: "ALAN PARKER", genre: "Drame", myNote: 4.4, specNote: 3.8 },
+  { decade: "1970", title: "APOCALYPSE NOW", year: 1979, director: "FRANCIS FORD COPPOLA", genre: "Drame, Guerre", myNote: 4.5, specNote: 4.2 },
+  { decade: "1970", title: "ALIEN LE 8e PASSAGER", year: 1979, director: "RIDLEY SCOTT", genre: "Horreur, Science-Fiction", myNote: 4.2, specNote: 4.3 },
+
+  // 1980
+  { decade: "1980", title: "SHINING", year: 1980, director: "STANLEY KUBRICK", genre: "Thriller, Horreur", myNote: 4.7, specNote: 4.2 },
+  { decade: "1980", title: "STAR WARS L'EMPIRE CONTRE ATTAQUE", year: 1980, director: "IRVIN KERSHNER", genre: "Science-Fiction, Aventure", myNote: 4.6, specNote: 4.4 },
+  { decade: "1980", title: "E.T. L'EXTRA TERRESTRE", year: 1982, director: "STEVEN SPIELBERG", genre: "Science-Fiction, Aventure", myNote: 4.7, specNote: 4.0 },
+  { decade: "1980", title: "STAR WARS LE RETOUR DU JEDI", year: 1983, director: "RICHARD MARQUAND", genre: "Science-Fiction, Aventure", myNote: 4.6, specNote: 4.2 },
+  { decade: "1980", title: "IL ÉTAIT UNE FOIS EN AMÉRIQUE", year: 1984, director: "SERGIO LEONE", genre: "Drame, Thriller, Crime", myNote: 4.5, specNote: 4.2 },
+  { decade: "1980", title: "RETOUR VERS LE FUTUR", year: 1985, director: "ROBERT ZEMECKIS", genre: "Science-Fiction, Aventure, Comédie", myNote: 4.7, specNote: 4.3 },
+  { decade: "1980", title: "FULL METAL JACKET", year: 1987, director: "STANLEY KUBRICK", genre: "Drame, Guerre", myNote: 4.5, specNote: 4.2 },
+  { decade: "1980", title: "RAIN MAN", year: 1988, director: "BARRY LEVINSON", genre: "Drame, Comédie", myNote: 4.5, specNote: 4.0 },
+  { decade: "1980", title: "RETOUR VERS LE FUTUR 2", year: 1989, director: "ROBERT ZEMECKIS", genre: "Science-Fiction, Aventure, Comédie", myNote: 4.7, specNote: 3.9 },
+
   // 1990
   { decade: "1990", title: "LES AFFRANCHIS", year: 1990, director: "MARTIN SCORSESE", genre: "Thriller, Crime", myNote: 4.7, specNote: 4.4 },
   { decade: "1990", title: "LE SILENCE DES AGNEAUX", year: 1991, director: "JONATHAN DEMME", genre: "Thriller, Policier", myNote: 4.6, specNote: 4.3 },
@@ -353,7 +393,6 @@ const movies = [
   { decade: "1990", title: "SEVEN", year: 1995, director: "DAVID FINCHER", genre: "Thriller, Policier", myNote: 4.7, specNote: 4.3 },
   { decade: "1990", title: "USUAL SUSPECTS", year: 1995, director: "BRYAN SINGER", genre: "Thriller, Policier", myNote: 4.5, specNote: 4.3 },
   { decade: "1990", title: "FARGO", year: 1996, director: "ETHAN & JOEL COEN", genre: "Thriller, Policier", myNote: 4.3, specNote: 4.1 },
-  { decade: "1990", title: "TRAINSPOTTING", year: 1996, director: "DANNY BOYLE", genre: "Drame, Crime", myNote: 4.1, specNote: 4.1 },
   { decade: "1990", title: "LA CONFIDENTIAL", year: 1997, director: "CURTIS HANSON", genre: "Thriller, Policier", myNote: 4.2, specNote: 4.0 },
   { decade: "1990", title: "LA VIE EST BELLE", year: 1997, director: "ROBERTO BEGNINI", genre: "Guerre, Comédie", myNote: 4.7, specNote: 4.3 },
   { decade: "1990", title: "THE GAME", year: 1997, director: "DAVID FINCHER", genre: "Thriller", myNote: 4.2, specNote: 3.9 },
@@ -371,8 +410,10 @@ const movies = [
 
   // 2000
   { decade: "2000", title: "GLADIATOR", year: 2000, director: "RIDLEY SCOTT", genre: "Action, Aventure", myNote: 4.8, specNote: 4.3 },
+  { decade: "2000", title: "IN THE MOOD FOR LOVE", year: 2000, director: "WONG KAR-WAI", genre: "Romance, Drame", myNote: 4.2, specNote: 4.1 },
   { decade: "2000", title: "MEMENTO", year: 2000, director: "CHRISTOPHER NOLAN", genre: "Thriller, Crime", myNote: 4.3, specNote: 4.2 },
   { decade: "2000", title: "REQUIEM FOR A DREAM", year: 2000, director: "DARREN ARONOFSKY", genre: "Drame", myNote: 4.6, specNote: 4.2 },
+  { decade: "2000", title: "DONNIE DARKO", year: 2001, director: "RICHARD KELLY", genre: "Drame, Science-Fiction", myNote: 4.2, specNote: 4.1 },
   { decade: "2000", title: "LE FABULEUX DESTIN D'AMELIE POULAIN", year: 2001, director: "JEAN-PIERRE JEUNET", genre: "Comédie, Romance", myNote: 4.5, specNote: 4.1 },
   { decade: "2000", title: "LE SEIGNEUR DES ANNEAUX LA COMMUNAUTE DE L'ANNEAU", year: 2001, director: "PETER JACKSON", genre: "Fantastique, Aventure", myNote: 4.8, specNote: 4.5 },
   { decade: "2000", title: "ARRETE MOI SI TU PEUX", year: 2002, director: "STEVEN SPIELBERG", genre: "Policier, Comédie", myNote: 4.4, specNote: 4.1 },
@@ -381,25 +422,36 @@ const movies = [
   { decade: "2000", title: "LE SEIGNEUR DES ANNEAUX LES DEUX TOURS", year: 2002, director: "PETER JACKSON", genre: "Fantastique, Aventure", myNote: 4.8, specNote: 4.4 },
   { decade: "2000", title: "MINORITY REPORT", year: 2002, director: "STEVEN SPIELBERG", genre: "Science-Fiction, Action", myNote: 4.6, specNote: 3.8 },
   { decade: "2000", title: "BIG FISH", year: 2003, director: "TIM BURTON", genre: "Fantastique, Aventure", myNote: 4.2, specNote: 4.0 },
-  { decade: "2000", title: "ADIEU LÉNINE", year: 2003, director: "WOLFGANG BECKER", genre: "Comédie, Drame", myNote: 4.7, specNote: 3.9 },
+  { decade: "2000", title: "ELEPHANT", year: 2003, director: "GUS VAN SANT", genre: "Drame", myNote: 4.3, specNote: 3.7 },
+  { decade: "2000", title: "GOOD BYE, LENIN!", year: 2003, director: "WOLFGANG BECKER", genre: "Comédie, Drame", myNote: 4.7, specNote: 3.9 },
   { decade: "2000", title: "KILL BILL VOL 1", year: 2003, director: "QUENTIN TARANTINO", genre: "Thriller, Action", myNote: 4.8, specNote: 4.1 },
   { decade: "2000", title: "LE SEIGNEUR DES ANNEAUX LE RETOUR DU ROI", year: 2003, director: "PETER JACKSON", genre: "Fantastique, Aventure", myNote: 4.9, specNote: 4.5 },
   { decade: "2000", title: "LOST IN TRANSLATION", year: 2003, director: "SOFIA COPPOLA", genre: "Drame", myNote: 4.6, specNote: 3.9 },
+  { decade: "2000", title: "MYSTIC RIVER", year: 2003, director: "CLINT EASTWOOD", genre: "Drame, Thriller", myNote: 4.2, specNote: 4.1 },
+  { decade: "2000", title: "OLD BOY", year: 2003, director: "PARK CHAN-WOOK", genre: "Action, Drame Thriller", myNote: 4.2, specNote: 4.2 },
   { decade: "2000", title: "ETERNAL SUNSHINE OF THE SPOTLESS MIND", year: 2004, director: "MICHEL GONDRY", genre: "Science-Fiction, Romance", myNote: 4.8, specNote: 4.2 },
   { decade: "2000", title: "KILL BILL VOL 2", year: 2004, director: "QUENTIN TARANTINO", genre: "Thriller, Action", myNote: 4.8, specNote: 4.0 },
+  { decade: "2000", title: "LA CHUTE", year: 2004, director: "OLIVER HIRSCHBIEGEL", genre: "Biopic, Drame, Historique", myNote: 4.2, specNote: 4.1 },
   { decade: "2000", title: "MILLION DOLLAR BABY", year: 2004, director: "CLINT EASTWOOD", genre: "Drame", myNote: 4.8, specNote: 4.1 },
+  { decade: "2000", title: "DE BATTRE MON COEUR S'EST ARRÊTÉ", year: 2005, director: "JACQUES AUDIARD", genre: "Drame", myNote: 4.2, specNote: 3.7 },
+  { decade: "2000", title: "LE SECRET DE BROKEBACK MOUNTAIN", year: 2005, director: "ANG LEE", genre: "Drame, Romance", myNote: 4.2, specNote: 3.9 },
   { decade: "2000", title: "LE LABYRINTHE DE PAN", year: 2006, director: "GUILLERMO DEL TORO", genre: "Guerre, Fantastique", myNote: 4.3, specNote: 4.1 },
   { decade: "2000", title: "LE PRESTIGE", year: 2006, director: "CHRISTOPHER NOLAN", genre: "Thriller, Science-Fiction", myNote: 4.3, specNote: 4.3 },
   { decade: "2000", title: "LES FILS DE L'HOMME", year: 2006, director: "ALFONSO CUARON", genre: "Science-Fiction, Action", myNote: 4.4, specNote: 4.0 },
-  { decade: "2000", title: "LES INFILTRES", year: 2006, director: "MARTIN SCORSESE", genre: "Thriller, Policier", myNote: 4.8, specNote: 4.3 },
-  { decade: "2000", title: "LITTLE MISS SUNSHINE", year: 2006, director: "Jonathan Dayton et Valerie Faris", genre: "Comédie", myNote: 4.3, specNote: 3.9 },
+  { decade: "2000", title: "LES INFILTRÉS", year: 2006, director: "MARTIN SCORSESE", genre: "Thriller, Policier", myNote: 4.8, specNote: 4.3 },
+  { decade: "2000", title: "LITTLE MISS SUNSHINE", year: 2006, director: "JONATHON DAYTON, VALERIE FARIS", genre: "Comédie", myNote: 4.3, specNote: 3.9 },
   { decade: "2000", title: "INTO THE WILD", year: 2007, director: "SEAN PENN", genre: "Drame", myNote: 4.6, specNote: 4.1 },
+  { decade: "2000", title: "JUNO", year: 2007, director: "JASON REITMAN", genre: "Comédie, Drame", myNote: 4.2, specNote: 3.8 },
   { decade: "2000", title: "NO COUNTRY FOR OLD MEN", year: 2007, director: "ETHAN & JOEL COEN", genre: "Thriller, Crime, Western", myNote: 4.4, specNote: 4.1 },
   { decade: "2000", title: "THERE WILL BE BLOOD", year: 2007, director: "PAUL THOMAS ANDERSON", genre: "Drame, Western", myNote: 4.5, specNote: 4.1 },
   { decade: "2000", title: "GRAN TORINO", year: 2008, director: "CLINT EASTWOOD", genre: "Drame", myNote: 4.4, specNote: 4.1 },
-  { decade: "2000", title: "L'ETRANGE HISTOIRE DE BENJAMIN BUTTON", year: 2008, director: "DAVID FINCHER", genre: "Fantastique, Romance", myNote: 4.5, specNote: 3.9 },
+  { decade: "2000", title: "LA VAGUE", year: 2008, director: "DENNIS GANSEL", genre: "Drame, Thriller", myNote: 4.2, specNote: 4.1 },
+  { decade: "2000", title: "LES NOCES REBELLES", year: 2008, director: "SAM MENDES", genre: "Drame, Romance", myNote: 4.2, specNote: 3.7 },
+  { decade: "2000", title: "L'ÉTRANGE HISTOIRE DE BENJAMIN BUTTON", year: 2008, director: "DAVID FINCHER", genre: "Fantastique, Romance", myNote: 4.5, specNote: 3.9 },
+  { decade: "2000", title: "SLUMDOG MILLIONAIRE", year: 2008, director: "DANNY BOYLE, LOVELEEN TANDAN", genre: "Comédie, Drame, Romance", myNote: 4.2, specNote: 4.1 },
   { decade: "2000", title: "THE DARK KNIGHT", year: 2008, director: "CHRISTOPHER NOLAN", genre: "Thriller, Action", myNote: 4.7, specNote: 4.5 },
   { decade: "2000", title: "INGLORIOUS BASTERDS", year: 2009, director: "QUENTIN TARANTINO", genre: "Historique, Guerre", myNote: 4.6, specNote: 4.2 },
+  { decade: "2000", title: "UN PROPHÈTE", year: 2009, director: "JACQUES AUDIARD", genre: "Drame, Crime", myNote: 4.2, specNote: 4.0 },
 
   // 2010
   { decade: "2010", title: "BLACK SWAN", year: 2010, director: "DARREN ARONOFSKY", genre: "Thriller, Drame, Horreur", myNote: 4.3, specNote: 4.0 },
@@ -409,6 +461,8 @@ const movies = [
   { decade: "2010", title: "SHUTTER ISLAND", year: 2010, director: "MARTIN SCORSESE", genre: "Thriller, Horreur", myNote: 4.5, specNote: 4.1 },
   { decade: "2010", title: "THE SOCIAL NETWORK", year: 2010, director: "DAVID FINCHER", genre: "Drame", myNote: 4.3, specNote: 3.9 },
   { decade: "2010", title: "DRIVE", year: 2011, director: "NICOLAS WINDING REFN", genre: "Thriller, Action", myNote: 4.6, specNote: 3.9 },
+  { decade: "2010", title: "INTOUCHABLES", year: 2011, director: "ERIC TOLEDANO, OLIVIER NAKACHE", genre: "Biopic, Comédie, Drame", myNote: 4.2, specNote: 4.3 },
+  { decade: "2010", title: "LA COULEUR DES SENTIMENTS (THE HELP)", year: 2011, director: "TATE TAYLOR", genre: "Drame", myNote: 4.2, specNote: 4.1 },
   { decade: "2010", title: "DJANGO UNCHAINED", year: 2012, director: "QUENTIN TARANTINO", genre: "Western, Action", myNote: 4.7, specNote: 4.3 },
   { decade: "2010", title: "LAURENCE ANYWAYS", year: 2012, director: "XAVIER DOLAN", genre: "Drame", myNote: 4.4, specNote: 3.8 },
   { decade: "2010", title: "MOONRISE KINGDOM", year: 2012, director: "WES ANDERSON", genre: "Comédie, Romance", myNote: 4.3, specNote: 3.9 },
@@ -421,48 +475,43 @@ const movies = [
   { decade: "2010", title: "PRISONERS", year: 2013, director: "DENIS VILLENEUVE", genre: "Thriller, Crime", myNote: 4.2, specNote: 4.1 },
   { decade: "2010", title: "INTERSTELLAR", year: 2014, director: "CHRISTOPHER NOLAN", genre: "Science-Fiction, Aventure", myNote: 4.8, specNote: 4.4 },
   { decade: "2010", title: "WHIPLASH", year: 2014, director: "DAMIEN CHAZELLE", genre: "Drame", myNote: 4.4, specNote: 4.3 },
+  { decade: "2010", title: "BROOKLYN", year: 2015, director: "JOHN CROWLEY, PAUL TSAN", genre: "Drame, Romance", myNote: 4.2, specNote: 3.8 },
+  { decade: "2010", title: "ROOM", year: 2015, director: "LENNY ABRAHMSON", genre: "Drame, Thriller", myNote: 4.2, specNote: 4.1 },
   { decade: "2010", title: "THE REVENANT", year: 2015, director: "ALEJANDRO GONZALEZ INARRITU", genre: "Western, Aventure", myNote: 4.4, specNote: 4.0 },
+  { decade: "2010", title: "CAPTAIN FANTASTIC", year: 2016, director: "MATT ROSS", genre: "Comédie, Drame", myNote: 4.2, specNote: 4.1 },
   { decade: "2010", title: "LA LA LAND", year: 2016, director: "DAMIEN CHAZELLE", genre: "Comédie, Musical", myNote: 4.7, specNote: 4.3 },
   { decade: "2010", title: "MOONLIGHT", year: 2016, director: "BARRY JENKINS", genre: "Drame", myNote: 4.7, specNote: 4.0 },
   { decade: "2010", title: "PREMIER CONTACT", year: 2016, director: "DENIS VILLENEUVE", genre: "Science-Fiction, Thriller", myNote: 4.3, specNote: 4.0 },
   { decade: "2010", title: "DUNKERQUE", year: 2017, director: "CHRISTOPHER NOLAN", genre: "Historique, Guerre", myNote: 4.6, specNote: 3.7 },
+  { decade: "2010", title: "LA FORME DE L'EAU", year: 2017, director: "GUILLERMO DEL TORO", genre: "Drame, Fantastique, Romance", myNote: 4.2, specNote: 3.7 },
+  { decade: "2010", title: "BOHEMIAN RHAPSODY", year: 2018, director: "BRYAN SINGER", genre: "Biopic, Drame", myNote: 4.2, specNote: 4.1 },
   { decade: "2010", title: "GREEN BOOK", year: 2018, director: "PETER FARRELLY", genre: "Comédie, Drame", myNote: 4.8, specNote: 3.9 },
   { decade: "2010", title: "1917", year: 2019, director: "SAM MENDES", genre: "Historique, Guerre", myNote: 4.8, specNote: 3.9 },
   { decade: "2010", title: "LE MANS 66", year: 2019, director: "JAMES MANGOLD", genre: "Action", myNote: 4.4, specNote: 4.1 },
   { decade: "2010", title: "LES MISÉRABLES", year: 2019, director: "LADJ LY", genre: "Drame", myNote: 4.4, specNote: 4.1 },
   { decade: "2010", title: "PARASITE", year: 2019, director: "BONG JOON-HO", genre: "Thriller, Comédie", myNote: 4.3, specNote: 4.3 },
+  { decade: "2010", title: "PORTRAIT DE LA JEUNE FILLE EN FEU", year: 2019, director: "CÉLINE SCIAMMA", genre: "Drame, Romance", myNote: 4.2, specNote: 3.9 },
   { decade: "2010", title: "THE IRISHMAN", year: 2019, director: "MARTIN SCORSESE", genre: "Thriller, Crime", myNote: 4.4, specNote: 3.8 },
+  { decade: "2010", title: "SOUND OF METAL", year: 2019, director: "DARIUS MARDER", genre: "Drame", myNote: 4.2, specNote: 3.9 },
 
   // 2020
-  { decade: "2020", title: "BAC NORD", year: 2020, director: "CEDRIC JIMENEZ", genre: "Thriller, Action, Policier", myNote: 4.1, specNote: 3.5 },
   { decade: "2020", title: "NOMADLAND", year: 2020, director: "CHLOE ZHAO", genre: "Drame", myNote: 4.7, specNote: 4.1 },
-  { decade: "2020", title: "THE FATHER", year: 2020, director: "FLORIAN ZELLER", genre: "Drame", myNote: 4.1, specNote: 4.1 },
   { decade: "2020", title: "DUNE", year: 2021, director: "DENIS VILLENEUVE", genre: "Science-Fiction, Aventure", myNote: 4.4, specNote: 4.0 },
-  { decade: "2020", title: "ILLUSIONS PERDUES", year: 2021, director: "XAVIER GIANNOLI", genre: "Historique, Drame", myNote: 4.1, specNote: 4.1 },
   { decade: "2020", title: "LICORICE PIZZA", year: 2021, director: "PAUL THOMAS ANDERSON", genre: "Comédie, Romance", myNote: 4.2, specNote: 3.6 },
-  { decade: "2020", title: "AS BESTAS", year: 2022, director: "RODRIGO SOROGOYEN", genre: "Thriller", myNote: 4.1, specNote: 3.8 },
   { decade: "2020", title: "BABYLON", year: 2022, director: "DAMIEN CHAZELLE", genre: "Comédie, Drame", myNote: 4.5, specNote: 3.9 },
   { decade: "2020", title: "BLONDE", year: 2022, director: "ANDREW DOMINIK", genre: "Biopic, Drame", myNote: 4.3, specNote: 2.8 },
   { decade: "2020", title: "LA NUIT DU 12", year: 2022, director: "DOMINIK MOLL", genre: "Thriller, Policier", myNote: 4.5, specNote: 3.9 },
-  { decade: "2020", title: "LES BANSHEES D'INISHERIN", year: 2022, director: "MARTIN MCDONAGH", genre: "Comédie, Drame", myNote: 4.1, specNote: 3.9 },
   { decade: "2020", title: "THE FABELMANS", year: 2022, director: "STEVEN SPIELBERG", genre: "Drame", myNote: 4.4, specNote: 3.6 },
   { decade: "2020", title: "THE WHALE", year: 2022, director: "DARREN ARONOFSKY", genre: "Drame", myNote: 4.4, specNote: 3.7 },
-  { decade: "2020", title: "ANATOMIE D'UNE CHUTE", year: 2023, director: "JUSTINE TRIET", genre: "Thriller, Policier", myNote: 4.1, specNote: 3.9 },
-  { decade: "2020", title: "JE VERRAI TOUJOURS VOS VISAGES", year: 2023, director: "JEANNE HERRY", genre: "Drame", myNote: 4.0, specNote: 3.9 },
-  { decade: "2020", title: "KILLERS OF THE FLOWER MOON", year: 2023, director: "MARTIN SCORSESE", genre: "Western, Thriller", myNote: 4.1, specNote: 3.8 },
   { decade: "2020", title: "OPPENHEIMER", year: 2023, director: "CHRISTOPHER NOLAN", genre: "Historique, Thriller", myNote: 4.7, specNote: 3.9 },
   { decade: "2020", title: "PAUVRES CREATURES", year: 2023, director: "YORGOS LANTHIMOS", genre: "Comédie, Fantastique", myNote: 4.4, specNote: 4.0 },
   { decade: "2020", title: "UNE VIE", year: 2023, director: "JAMES HAWES", genre: "Historique, Drame", myNote: 4.4, specNote: 3.8 },
   { decade: "2020", title: "WINTER BREAK", year: 2023, director: "ALEXANDER PAYNE", genre: "Comédie, Drame", myNote: 4.4, specNote: 3.8 },
-  { decade: "2020", title: "ANORA", year: 2024, director: "SEAN BAKER", genre: "Comédie, Romance", myNote: 4.1, specNote: 3.9 },
   { decade: "2020", title: "DUNE DEUXIEME PARTIE", year: 2024, director: "DENIS VILLENEUVE", genre: "Science-Fiction, Aventure", myNote: 4.7, specNote: 4.2 },
   { decade: "2020", title: "EN FANFARE", year: 2024, director: "EMMANUEL COURCOL", genre: "Comédie", myNote: 4.4, specNote: 3.7 },
   { decade: "2020", title: "L'AMOUR OUF", year: 2024, director: "GILLES LELLOUCHE", genre: "Drame", myNote: 4.4, specNote: 3.8 },
-  { decade: "2020", title: "L'ATTACHEMENT", year: 2024, director: "CARINE TARDIEU", genre: "Drame", myNote: 4.1, specNote: 3.9 },
   { decade: "2020", title: "LE CONTE DE MONTE CRISTO", year: 2024, director: "MATTHIEU DELAPORTE, ALEXANDRE DE LA PATELLIÈRE", genre: "Aventure, Action", myNote: 4.2, specNote: 4.2 },
-  { decade: "2020", title: "BUGONIA", year: 2025, director: "YORGOS LANTHIMOS", genre: "Science-Fiction, Comédie", myNote: 4.1, specNote: 3.7 },
   { decade: "2020", title: "HAMNET", year: 2025, director: "CHLOE ZHAO", genre: "Historique, Drame", myNote: 4.5, specNote: 3.5 },
-  { decade: "2020", title: "UNE BATAILLE APRES L'AUTRE", year: 2025, director: "PAUL THOMAS ANDERSON", genre: "Thriller, Action", myNote: 4.1, specNote: 3.7 },
   { decade: "2020", title: "L'ODYSEE", year: 2026, director: "CHRISTOPHER NOLAN", genre: "Fantastique, Action", myNote: 4.5, specNote: 3.9 }
 ];
 
